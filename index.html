@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>IRWELL - Benefiting You | University of Salford</title>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <!-- Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body class="map">
+
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <nav class="navbar navbar-default ">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                        <a class="pull-left" href="index.html">
+                            <img class="logo" src="img/irwell_logo.jpg" alt="IRWELL Logo" />
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- News Marquee-->
+        <div class="marquee">
+            <ul>
+                <li>News Item 1</li>
+                <li>News Item 2</li>
+                <li>News Item 3</li>
+                <li>News Item 4</li>
+                <li>News Item 5</li>
+                <li>News Item 6</li>
+                <li>News Item 7</li>
+                <li>News Item 8</li>
+                <li>News Item 9</li>
+                <li>News Item 10</li>
+            </ul>
+        </div>
+
+        <!-- Map -->
+        <div id="map">
+
+         
+            <!-- Map Navigation -->
+            <ul class="map-nav">
+                <li><a class="map-tooltip" onclick="goToScene('scene1')" data-toggle="tooltip" data-html="true" title="Peel Park">1</a></li>
+                <li><a class="map-tooltip" onclick="goToScene('scene2')" data-toggle="tooltip" data-html="true" title="Salford Museum">2</a></li>
+                <li><a class="map-tooltip" onclick="goToScene('scene3')" data-toggle="tooltip" data-html="true" title="Wood Street Mission">3</a></li>
+                <li><a class="map-tooltip" onclick="goToScene('scene4')" data-toggle="tooltip" data-html="true" title="Salford Docks">4</a></li>
+                <li><a class="map-tooltip" onclick="goToScene('scene5')" data-toggle="tooltip" data-html="true" title="Peel Building">5</a></li>
+                <li><a class="map-tooltip" onclick="goToScene('scene6')" data-toggle="tooltip" data-html="true" title="Maxwell Hall">6</a></li>
+                <li><a class="map-tooltip" onclick="goToScene('scene7')" data-toggle="tooltip" data-html="true" title="Frederick Road Campus">7</a></li>
+                <li><a class="map-tooltip" onclick="goToScene('scene8')" data-toggle="tooltip" data-html="true" title="Salford Crescent">8</a></li>
+                <li><a class="map-tooltip" onclick="goToScene('scene9')" data-toggle="tooltip" data-html="true" title="Lowry Outlet">9</a></li>
+                <li><a class="map-tooltip" onclick="goToScene('scene10')" data-toggle="tooltip" data-html="true" title="The Lowry">10</a></li>
+                <li><a class="map-tooltip" onclick="goToScene('scene11')" data-toggle="tooltip" data-html="true" title="Energy House">11</a></li>
+                <li><a class="map-tooltip" onclick="goToScene('scene12')" data-toggle="tooltip" data-html="true" title="Media City UK">12</a></li>
+                <li><a class="map-tooltip" onclick="goToScene('scene13')" data-toggle="tooltip" data-html="true" title="New Adelphi">13</a></li>
+                <li><a class="map-tooltip" onclick="goToScene('scene14')" data-toggle="tooltip" data-html="true" title="Under Construction">14</a></li>
+            </ul>
+
+            <div class="pane">
+                <div id="box">
+
+                    <!-- Scene 1 - Peel Park -->
+                    <div class="scene" id="scene1">
+                        <div class="layer" id="parkSky" data-speed="-5">
+                            <img src="img/map/misc/sky.jpg" alt="Peel Park Sky" />
+                        </div>
+                        <div class="layer" id="parkBackground" data-speed="20">
+                            <img src="img/map/scene1/park_background.png" alt="Peel Park Background" />
+                            <button type="button" class="map-tooltip fa fa-info" data-toggle="tooltip" data-placement="top" data-html="true" title="" data-original-title="Peel Park was the first public park to open in 1846. Sir Robert Peel, the former Prime Minister oversaw significant legislation on social and economic policies, specifically the working rights for women and children."></button>
+                        </div>
+                        <div class="layer" id="parkGround" data-speed="20">
+                            <img src="img/map/scene1/park_ground.jpg" />
+                        </div>
+                        <div class="layer" id="parkChildcare" data-speed="30">
+                            <img src="img/map/scene1/park_childcare.png" />
+                            <div class="map-link right">
+                                <a href="#">Childcare Vouchers</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="parkPlane" data-speed="-25">
+                            <img src="img/map/scene1/park_plane.png" />
+                            <div class="map-link left">
+                                <a href="#">Additional Annual Leave</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="parkFlexible" data-speed="25">
+                            <img src="img/map/scene1/park_flexible.png" />
+                            <div class="map-link left">
+                                <a href="#">Flexible Working</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="parkFlexitime" data-speed="40">
+                            <img src="img/map/scene1/park_flexitime.png" />
+                            <div class="map-link left">
+                                <a href="#">Flexi Time</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="parkRetirement" data-speed="-60">
+                            <img src="img/map/scene1/park_retirement.png" />
+                            <div class="map-link left">
+                                <a href="#">Flexible Retirement</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="parkNursery" data-speed="25">
+                            <img src="img/map/scene1/park_nursery.png" />
+                            <div class="map-link right">
+                                <a href="#">Nursery</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="parkPensions" data-speed="30">
+                            <img src="img/map/scene1/park_pensions.png" />
+                            <div class="map-link left">
+                                <a href="#">Pensions</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="parkBoat" data-speed="60">
+                            <img src="img/map/scene1/park_boat.png" />
+                            <div class="map-link left">
+                                <a href="#">Agile Working</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scene 2 - Salford Museum -->
+                    <div class="scene" id="scene2">
+                        <div class="layer" id="museumSky" data-speed="-5">
+                            <img src="img/map/misc/sky_alt.jpg" />
+                        </div>
+                        <div class="layer" id="museumBackground" data-speed="20">
+                            <img src="img/map/scene2/museum_background.png" />
+                            <button type="button" class="map-tooltip fa fa-info" data-toggle="tooltip" data-placement="right" data-html="true" title="" data-original-title="Salford Museum and Art Gallery opened in January 1850 was the UK’s first unconditionally free public lending library, followed in November by a museum and art gallery."></button>
+                        </div>
+                        <div class="layer" id="museumGround" data-speed="20">
+                            <img src="img/map/misc/ground_grey_bench.jpg" />
+                        </div>
+                        <div class="layer" id="museumLibraryMan" data-speed="-30">
+                            <img class="lazy" data-src="img/map/scene2/museum_man.png" />
+                            <div class="map-link right">
+                                <a href="#">Library Subscriptions</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="museumSwan" data-speed="-10">
+                            <img class="lazy" data-src="img/map/scene2/museum_swan.png" />
+                        </div>
+                        <div class="layer" id="museumColleagues" data-speed="30">
+                            <img class="lazy" data-src="img/map/scene2/museum_colleagues.png" />
+                        </div>
+                        <div class="layer" id="museumTourists" data-speed="-35">
+                            <img class="lazy" data-src="img/map/scene2/museum_tourists.png" />
+                            <div class="map-link left">
+                                <a href="#">Library Services</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="museumCouple" data-speed="30">
+                            <img class="lazy" data-src="img/map/scene2/museum_couple.png" />
+                        </div>
+                        <div class="layer" id="museumDog" data-speed="50">
+                            <img class="lazy" data-src="img/map/scene2/museum_dog.png" />
+                        </div>
+                        <div class="layer" id="museumToilets" data-speed="30">
+                            <img class="lazy" data-src="img/map/scene2/museum_toilets.png" />
+                        </div>
+                    </div>
+
+                    <!-- Scene 3 - Wood Street Mission -->
+                    <div class="scene" id="scene3">
+                        <div class="layer" id="communitySky" data-speed="-5">
+                            <img src="img/map/misc/sky.jpg" />
+                        </div>
+                        <div class="layer" id="communityBackground" data-speed="20">
+                            <img src="img/map/scene3/community_background.png" />
+                            <button type="button" class="map-tooltip fa fa-info" data-toggle="tooltip" data-placement="left" data-html="true" title="" data-original-title="The Wood Street Mission was founded by Alfred Alsop in 1869, and its aim is to alleviate the effects of poverty on children and families in Manchester and Salford. The charity provides free, practical help to several thousand families in need every year."></button>
+                        </div>
+                        <div class="layer" id="communityGround" data-speed="20">
+                            <img src="img/map/misc/ground_grey_grass_fade_left.jpg" />
+                        </div>
+                        <div class="layer" id="communityFriends" data-speed="30">
+                            <img class="lazy" data-src="img/map/scene3/community_friends.png" />
+                        </div>
+                        <div class="layer" id="communityMan" data-speed="30">
+                            <img class="lazy" data-src="img/map/scene3/community_man.png" />
+                        </div>
+                        <div class="layer" id="communityGirlfriends" data-speed="80">
+                            <img class="lazy" data-src="img/map/scene3/community_girlfriends.png" />
+                        </div>
+                        <div class="layer" id="communityGive" data-speed="25">
+                            <img class="lazy" data-src="img/map/scene3/community_give.png" />
+                            <div class="map-link left">
+                                <a href="#">Give as you earn</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="communityPankhurst" data-speed="20">
+                            <img class="lazy" data-src="img/map/scene3/community_pankhurst.png" />
+                        </div>
+                        <div class="layer" id="communityGrandparent" data-speed="30">
+                            <img class="lazy" data-src="img/map/scene3/community_grandparent.png" />
+                        </div>
+                        <div class="layer" id="communityInclusive" data-speed="25">
+                            <img class="lazy" data-src="img/map/scene3/community_inclusive.png" />
+                            <div class="map-link right">
+                                <a href="#">Community</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="communityWheelchair" data-speed="-50">
+                            <img class="lazy" data-src="img/map/scene3/community_wheelchair.png" />
+                        </div>
+                        <div class="layer" id="communityAssistance" data-speed="10">
+                            <img class="lazy" data-src="img/map/scene3/community_assistance.png" />
+                            <div class="map-link right">
+                                <a href="#">Volunteer</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scene 4 - Salford Docks -->
+                    <div class="scene" id="scene4">
+                        <div class="layer" id="docksSky" data-speed="-5">
+                            <img src="img/map/misc/sky.jpg" />
+                        </div>
+                        <div class="layer" id="docksBackground" data-speed="20">
+                            <img src="img/map/scene4/docks_background.png" />
+                            <button type="button" class="map-tooltip fa fa-info" data-toggle="tooltip" data-placement="right" data-html="true" title="" data-original-title="Built by the Manchester Ship Canal Company, Salford Docks was the larger of two sections that made up Manchester Docks. At their height, the Manchester Docks were the third busiest port in Britain."></button>
+                        </div>
+                        <div class="layer" id="docksGround" data-speed="20">
+                            <img src="img/map/misc/ground_beige_grey_fade.jpg" />
+                        </div>
+                        <div class="layer" id="docksWorkers" data-speed="35">
+                            <img class="lazy" data-src="img/map/scene4/docks_workers.png" />
+                            <div class="map-link right">
+                                <a href="#">Induction Activity</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="docksCrates" data-speed="25">
+                            <img class="lazy" data-src="img/map/scene4/docks_crates.png" />
+                        </div>
+                        <div class="layer" id="docksBoat" data-speed="30">
+                            <img class="lazy" data-src="img/map/scene4/docks_boat.png" />
+                            <div class="map-link right">
+                                <a href="#">Removal Expenses</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="docksPensions" data-speed="15">
+                            <img class="lazy" data-src="img/map/scene1/park_pensions.png" />
+                            <div class="map-link left">
+                                <a href="#">Pensions</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scene 5 - Peel Building -->
+                    <div class="scene" id="scene5">
+                        <div class="layer" id="peelSky" data-speed="-5">
+                            <img src="img/map/misc/sky.jpg" />
+                        </div>
+                        <div class="layer" id="peelBackground" data-speed="20">
+                            <img src="img/map/scene5/peel_background.png" />
+                            <button type="button" class="map-tooltip fa fa-info" data-toggle="tooltip" data-placement="left" data-html="true" title="" data-original-title="The University’s Oldest Building. Originally the home for Salford Royal Technical Institute it was opened by the then Duke and Duchess of York (latterly George V and Queen Mary) in 1896."></button>
+                        </div>
+                        <div class="layer" id="peelGround" data-speed="20">
+                            <img src="img/map/misc/ground_grey.jpg" />
+                        </div>
+                        <div class="layer" id="peelService" data-speed="70">
+                            <img class="lazy" data-src="img/map/scene5/peel_service.png" />
+                             <div class="map-link right">
+                                <a href="#">Long Service Awards</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="peelChildren" data-speed="15">
+                            <img class="lazy" data-src="img/map/scene5/peel_children.png" />
+                        </div>
+                        <div class="layer" id="peelMerit" data-speed="40">
+                            <img class="lazy" data-src="img/map/scene5/peel_merit.png" />
+                            <div class="map-link right">
+                                <a href="#">Merit Awards</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="peelThanks" data-speed="10">
+                            <img class="lazy" data-src="img/map/scene5/peel_thanks.png" />
+                            <div class="map-link left">
+                                <a href="#">Thank You</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="peelWheelchair" data-speed="50">
+                            <img class="lazy" data-src="img/map/scene5/peel_wheelchair.png" />
+                        </div>
+                        <div class="layer" id="peelBadge" data-speed="-30">
+                            <img class="lazy" data-src="img/map/scene5/peel_badge.png" />
+                        </div>
+                        <div class="layer" id="peelLion" data-speed="-60">
+                            <img class="lazy" data-src="img/map/scene5/peel_lion.png" />
+                        </div>
+                    </div>
+
+                    <!-- Scene 6 - Maxwell Hall -->
+                    <div class="scene" id="scene6">
+                        <div class="layer" id="hallSky" data-speed="-5">
+                            <img src="img/map/misc/sky_alt.jpg" />
+                        </div>
+                        <div class="layer" id="hallBackground" data-speed="20">
+                            <img src="img/map/scene6/hall_background.png" />
+                            <button type="button" class="map-tooltip fa fa-info" data-toggle="tooltip" data-placement="top" data-html="true" title="" data-original-title="Maxwell Hall has a long history as a venue for social activity and many famous bands/musicians have played including The Smiths, New Order, Debbie Harry and The Kinks."></button>
+                        </div>
+                        <div class="layer" id="hallGround" data-speed="20">
+                            <img src="img/map/misc/ground_grey.jpg" />
+                        </div>
+                        <div class="layer" id="hallNews" data-speed="30">
+                            <img class="lazy" data-src="img/map/scene6/hall_news.png" />
+                            <div class="map-link left">
+                                <a href="#">News</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="hallGary" data-speed="30">
+                            <img class="lazy" data-src="img/map/scene6/hall_gary.png" />
+                        </div>
+                        <div class="layer" id="hallEvents" data-speed="20">
+                            <img class="lazy" data-src="img/map/scene6/hall_events.png" />
+                            <div class="map-link left">
+                                <a href="#">Events Calendar</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="hallNetworking" data-speed="50">
+                            <img class="lazy" data-src="img/map/scene6/hall_networking.png" />
+                            <div class="map-link left">
+                                <a href="#">Colleague Networks</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="hallSocieties" data-speed="30">
+                            <img class="lazy" data-src="img/map/scene6/hall_societies.png" />
+                            <div class="map-link right">
+                                <a href="#">Societies</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scene 7 - Frederick Road Campus -->
+                    <div class="scene" id="scene7">
+                        <div class="layer" id="campusSky" data-speed="-5">
+                            <img src="img/map/misc/sky.jpg" />
+                        </div>
+                        <div class="layer" id="campusBackground" data-speed="20">
+                            <img src="img/map/scene7/campus_background.png" />
+                            <button type="button" class="map-tooltip fa fa-info" data-toggle="tooltip" data-placement="left" data-html="true" title="" data-original-title="The Totem Sculptures in the front courtyard of Allerton are “listed” for special architectural or historic interest."></button>
+                        </div>
+                        <div class="layer" id="campusGround" data-speed="20">
+                            <img src="img/map/misc/ground_grey_beige_fade_right.jpg" />
+                        </div>
+                        <div class="layer" id="campusMarquee" data-speed="25">
+                            <img class="lazy" data-src="img/map/scene7/campus_marquee.png" />
+                        </div>
+                        <div class="layer" id="campusTeam" data-speed="50">
+                            <img class="lazy" data-src="img/map/scene7/campus_team.png" />
+                        </div>
+                        
+                        <div class="layer" id="campusClaims" data-speed="40">
+                            <img class="lazy" data-src="img/map/scene7/campus_claims.png" />
+                            <div class="map-link right">
+                                <a href="#">DSE Claims</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="campusTotems" data-speed="25">
+                            <img class="lazy" data-src="img/map/scene7/campus_totems.png" />
+                        </div>
+                        <div class="layer" id="campusGeneral" data-speed="25">
+                            <img class="lazy" data-src="img/map/scene7/campus_general.png" />
+                            <div class="map-link left">
+                                <a href="#">General Wellbeing</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="campusFinancial" data-speed="15">
+                            <img class="lazy" data-src="img/map/scene7/campus_financial.png" />
+                            <div class="map-link right">
+                                <a href="#">Financial Wellbeing</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="campusPhysical" data-speed="100">
+                            <img class="lazy" data-src="img/map/scene7/campus_physical.png" />
+                            <div class="map-link right">
+                                <a href="#">Physical Wellbeing</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="campusPsychological" data-speed="20">
+                            <img class="lazy" data-src="img/map/scene7/campus_psychological.png" />
+                            <div class="map-link left">
+                                <a href="#">Psychological Wellbeing</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="campusPlan" data-speed="25">
+                            <img class="lazy" data-src="img/map/scene7/campus_plan.png" />
+                             <div class="map-link right">
+                                <a href="#">Health Cash Plan</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scene 8 - Salford Crescent -->
+                    <div class="scene" id="scene8">
+                        <div class="layer" id="crescentSky" data-speed="-5">
+                            <img src="img/map/misc/sky_day_night.jpg" />
+                        </div>
+                        <div class="layer" id="crescentBackground" data-speed="20">
+                            <img src="img/map/scene8/crescent_background.png" />
+                            <div class="map-link left">
+                                <a href="#">Season Tickets</a>
+                            </div>
+                            <button type="button" class="map-tooltip fa fa-info" data-toggle="tooltip" data-placement="left" data-html="true" title="" data-original-title="Given we have a railway station nestled between our campuses, we could not think of a better landmark to represent our travel benefits and initiatives."></button>
+                        </div>
+                        <div class="layer" id="crescentGround" data-speed="20">
+                            <img src="img/map/misc/ground_beige.jpg" />
+                        </div>
+                        <div class="layer" id="crescentBikes" data-speed="-350">
+                            <img class="lazy" data-src="img/map/scene8/crescent_bikes.png" />
+                            <div class="map-link left">
+                                <a href="#">Cycle to Work</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="crescentCarpark" data-speed="20">
+                            <img class="lazy" data-src="img/map/scene8/crescent_carpark.png" />
+                            <div class="map-link right">
+                                <a href="#">Car Parking</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="crescentCars" data-speed="30">
+                            <img class="lazy" data-src="img/map/scene8/crescent_cars.png" />
+                            <div class="map-link left">
+                                <a href="#">Car Sharing</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="crescentCharge" data-speed="45">
+                            <img class="lazy" data-src="img/map/scene8/crescent_charge.png" />
+                            <div class="map-link right">
+                                <a href="#">Car charging</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="crescentWoman" data-speed="25">
+                            <img class="lazy" data-src="img/map/scene8/crescent_woman.png" />
+                        </div>
+                    </div>
+
+                    <!-- Scene 9 - Lowry Outlet -->
+                    <div class="scene" id="scene9">
+                        <div class="layer" id="outletSky" data-speed="-5">
+                            <img src="img/map/misc/sky_night_alt2.jpg" />
+                        </div>
+                        <div class="layer" id="outletBackground" data-speed="20">
+                            <img src="img/map/scene9/outlet_background.png" />
+                            <button type="button" class="map-tooltip fa fa-info" data-toggle="tooltip" data-placement="right" data-html="true" title="" data-original-title="Salford's only outlet mall with 85 stores with up to 60% off designer shopping. The centre also has a fitness centre and a seven-screen cinema."></button>
+                            <div class="map-link left">
+                                <a href="#">Cinema Discounts</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="outletGround" data-speed="20">
+                            <img src="img/map/misc/ground_beige.jpg" />
+                        </div>
+                        <div class="layer" id="outletDelivery" data-speed="25">
+                            <img class="lazy" data-src="img/map/scene9/outlet_delivery.png" />
+                             <div class="map-link right">
+                                <a href="#">Local Offers</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="outletFamily" data-speed="50">
+                            <img class="lazy" data-src="img/map/scene9/outlet_family.png" />
+                            <div class="map-link left">
+                                <a href="#">NUS Extra</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="outletMale" data-speed="20">
+                            <img class="lazy" data-src="img/map/scene9/outlet_male.png" />
+                            <div class="map-link left">
+                                <a href="#">Cashback Card</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="outletFemale" data-speed="-10">
+                            <img class="lazy" data-src="img/map/scene9/outlet_female.png" />
+                            <div class="map-link left">
+                                <a href="#">High Street Discounts</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="outletFemale2" data-speed="20">
+                            <img class="lazy" data-src="img/map/scene9/outlet_female2.png" />
+                        </div>
+                         <div class="layer" id="outletHoliday" data-speed="-60">
+                            <img class="lazy" data-src="img/map/scene9/outlet_holiday.png" />
+                            <div class="map-link right">
+                                <a href="#">Holiday Discounts</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="outletRunner" data-speed="325">
+                            <img class="lazy" data-src="img/map/scene9/outlet_runner.png" />
+                            <div class="map-link right">
+                                <a href="#">Gym Discounts</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scene 10 - The Lowry -->
+                    <div class="scene" id="scene10">
+                        <div class="layer" id="lowrySky" data-speed="-5">
+                            <img src="img/map/misc/sky_night_day.jpg" />
+                        </div>
+                        <div class="layer" id="lowryBackground" data-speed="20">
+                            <img src="img/map/scene10/lowry_background.png" />
+                            <button type="button" class="map-tooltip fa fa-info" data-toggle="tooltip" data-placement="bottom" data-html="true" title="" data-original-title="The Lowry is a registered charity committed to using visual and performing arts to enrich people’s lives. Tapping into the work on the stages and in the galleries, they offer free creative participation opportunities. They're passionate about nurturing talent, developing creative professionals and raising aspirations."></button>
+                        </div>
+                        <div class="layer" id="lowryGround" data-speed="20">
+                            <img src="img/map/misc/ground_grey_beige_fade_left.jpg" />
+                        </div>
+                         <div class="layer" id="lowryGraduates" data-speed="40">
+                            <img class="lazy" data-src="img/map/scene10/lowry_graduates.png" />
+                        </div>
+                        <div class="layer" id="lowryEnhancement" data-speed="-200">
+                            <img class="lazy" data-src="img/map/scene10/lowry_enhancement.png" />
+                            <div class="map-link right">
+                                <a href="#">Quality Enhancement Office</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="lowryInduction" data-speed="30">
+                            <img class="lazy" data-src="img/map/scene10/lowry_induction.png" />
+                            <div class="map-link left">
+                                <a href="#">Induction Activity</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="lowryLearning" data-speed="10">
+                            <img class="lazy" data-src="img/map/scene10/lowry_learning.png" />
+                            <div class="map-link left">
+                                <a href="#">Learning and Development</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="lowryResearch" data-speed="60">
+                            <img class="lazy" data-src="img/map/scene10/lowry_research.png" />
+                            <div class="map-link left">
+                                <a href="#">Research</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="lowrySkills" data-speed="10">
+                            <img class="lazy" data-src="img/map/scene10/lowry_skills.png" />
+                            <div class="map-link right">
+                                <a href="#">Digital Skills</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scene 11 - Salford Energy House -->
+                    <div class="scene" id="scene11">
+                        <div class="layer" id="energySky" data-speed="-5">
+                            <img src="img/map/misc/sky.jpg" />
+                        </div>
+                        <div class="layer" id="energyBackground" data-speed="20">
+                            <img src="img/map/scene11/energy_background.png" />
+                        </div>
+                        <div class="layer" id="energyThunderstorm" data-speed="-20">
+                            <img src="img/map/scene11/energy_thunderstorm.png" />
+                            <button type="button" class="map-tooltip fa fa-info" data-toggle="tooltip" data-placement="left" data-html="true" title="" data-original-title="The Salford Energy House is the centrepiece of the University’s cross discipline energy theme. Built in 2011, this full sized two bedroom terraced house is the only fully climate controlled research facility in the world."></button>
+                        </div>
+                        <div class="layer" id="energyGround" data-speed="20">
+                            <img class="lazy" data-src="img/map/misc/ground_grey_grass_fade_right.jpg" />
+                        </div>
+                         <div class="layer" id="energyBuilding" data-speed="5">
+                            <img class="lazy" data-src="img/map/scene11/energy_building.png" />
+                        </div>
+                        <div class="layer" id="energyHouse" data-speed="-280">
+                            <img class="lazy" data-src="img/map/scene11/energy_house.png" />
+                            <div class="map-link left">
+                                <a href="#">Car Charging</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="energyBike" data-speed="-100">
+                            <img class="lazy" data-src="img/map/scene11/energy_bike.png" />
+                            <div class="map-link left">
+                                <a href="#">Cycle to Work</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="energyBiodiversity" data-speed="10">
+                            <img class="lazy" data-src="img/map/scene11/energy_biodiversity.png" />
+                            <div class="map-link left">
+                                <a href="#">Biodiversity</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="energyStudent" data-speed="15">
+                            <img class="lazy" data-src="img/map/scene11/energy_student.png" />
+                        </div>
+                        <div class="layer" id="energyHealthcare" data-speed="30">
+                            <img class="lazy" data-src="img/map/scene7/campus_healthcare.png" />
+                        </div>
+                        <div class="layer" id="energyInvolved" data-speed="30">
+                            <img class="lazy" data-src="img/map/scene11/energy_involved.png" />
+                            <div class="map-link right">
+                                <a href="#">Get Involved!</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scene 12 - Media City UK -->
+                    <div class="scene" id="scene12">
+                        <div class="layer" id="mediaSky" data-speed="-5">
+                            <img class="lazy" data-src="img/map/misc/sky_alt.jpg" />
+                        </div>
+                        <div class="layer" id="mediaBackground" data-speed="20">
+                            <img src="img/map/scene12/media_background.png" />
+                            <button type="button" class="map-tooltip fa fa-info" data-toggle="tooltip" data-placement="left" data-html="true" title="" data-original-title="Our MCUK campus is the place “where science and creativity collide.” The first academic establishment to open at MCUK with a brand new digital learning, teaching and research space."></button>
+                        </div>
+                        <div class="layer" id="mediaGround" data-speed="20">
+                            <img src="img/map/misc/ground_grey_bench.jpg" />
+                        </div>
+                        <div class="layer" id="mediaCamera" data-speed="40">
+                            <img src="img/map/scene12/media_camera.png" />
+                             <div class="map-link left">
+                                <a href="#">Digital Skills</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="mediaVan" data-speed="250">
+                            <img src="img/map/scene12/media_van.png" />
+                            <div class="map-link right">
+                                <a href="#">Eduroam</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="mediaLaptop" data-speed="20">
+                            <img src="img/map/scene12/media_laptop.png" />
+                            <div class="map-link left">
+                                <a href="#">MS Office</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="mediaPainting" data-speed="20">
+                            <img src="img/map/scene12/media_painting.png" />
+                        </div>
+                        <div class="layer" id="mediaTech" data-speed="20">
+                            <img src="img/map/scene12/media_tech.png" />
+                            <div class="map-link right">
+                                <a href="#">Affordable Technology</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scene 13 - New Adelphi -->
+                    <div class="scene" id="scene13">
+                        <div class="layer" id="adelphiSky" data-speed="-5">
+                            <img src="img/map/misc/sky_alt.jpg" />
+                        </div>
+                        <div class="layer" id="adelphiBackground" data-speed="20">
+                            <img src="img/map/scene13/adelphi_background.png" />
+                            <button type="button" class="map-tooltip fa fa-info" data-toggle="tooltip" data-placement="left" data-html="true" title="" data-original-title="The £55m New Adelphi building opened on our main Peel Park campus in September 2016, delivering a new home for music, performance, art, design and architecture students."></button>
+                        </div>
+                        <div class="layer" id="adelphiGround" data-speed="20">
+                            <img src="img/map/misc/ground_grey_grass_fade_left.jpg" />
+                        </div>
+                        <div class="layer" id="adelphiJohn" data-speed="25">
+                            <img class="lazy" data-src="img/map/scene13/adelphi_john.png" />
+                            <div class="map-link right">
+                                <a href="#">New Adelphi Theatre</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="adelphiJohnny" data-speed="30">
+                            <img class="lazy" data-src="img/map/scene13/adelphi_johnny.png" />
+                            <div class="map-link left">
+                                <a href="#">New Adelphi Gallery</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="adelphiLiam" data-speed="5">
+                            <img class="lazy" data-src="img/map/scene13/adelphi_liam.png" />
+                        </div>
+                        <div class="layer" id="adelphiStage" data-speed="20">
+                            <img class="lazy" data-src="img/map/scene13/adelphi_stage.png" />
+                        </div>
+                        <div class="layer" id="adelphiStilts" data-speed="-50">
+                            <img class="lazy" data-src="img/map/scene13/adelphi_stilts.png" />
+                        </div>
+                        <div class="layer" id="adelphiJuggler" data-speed="35">
+                            <img class="lazy" data-src="img/map/scene13/adelphi_juggler.png" />
+                        </div>
+                        <div class="layer" id="adelphiMan" data-speed="25">
+                            <img class="lazy" data-src="img/map/scene13/adelphi_man.png" />
+                        </div>
+                    </div>
+
+                    <!-- Scene 14 - Under Construction -->
+                    <div class="scene" id="scene14">
+                        <div class="layer" id="constructionSky" data-speed="-5">
+                            <img src="img/map/misc/sky_alt.jpg" />
+                        </div>
+                        <div class="layer" id="constructionBackground" data-speed="20">
+                            <img src="img/map/scene14/construction_background.png" />
+                            <button type="button" class="map-tooltip fa fa-info" data-toggle="tooltip" data-placement="right" data-html="true" title="" data-original-title="With so much exciting activity to come in relation to campus development, we felt it was important to showcase our ambitious plans and this section gives us an opportunity to do just that."></button>
+                        </div>
+                        <div class="layer" id="constructionGround" data-speed="20">
+                            <img src="img/map/misc/ground_beige_grey_fade_left.jpg" />
+                        </div>
+                        <div class="layer" id="constructionWorkers" data-speed="35">
+                            <img class="lazy" data-src="img/map/scene14/construction_workers.png" />
+                            <div class="map-link left">
+                                <a href="#">Campus Masterplan</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="constructionDigger" data-speed="150">
+                            <img class="lazy" data-src="img/map/scene14/construction_digger.png" />
+                            <div class="map-link right">
+                                <a href="#">One Digital Campus</a>
+                            </div>
+                        </div>
+                        <div class="layer" id="constructionFramework" data-speed="10">
+                            <img class="lazy" data-src="img/map/scene14/construction_framework.png" />
+                             <div class="map-link left">
+                                <a href="#">Campus Framework Projects</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                        <img class="footer__logo" src="img/UoS_logo.png">
+                    </div>
+
+                    <div class="col-xs-12 col-sm-3 col-md-2 col-md-offset-1 col-lg-offset-0 col-lg-2">
+                        <h4>Site Map</h4>
+                        <ul class="footer__menu">
+                            <li><a href="#">Map</a></li>
+                            <li><a href="#">My Profile</a></li>
+                            <li><a href="#">Managers Area</a></li>
+                            <li><a href="#">Catalogue</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+                        <ul class="footer__menu last">
+                            <li><a href="#">Terms and Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4 col-lg-offset-1">
+                        <div class="footer__social-links">
+                            <h4>Follow Us</h4>
+                            <ul>
+                                <li><a href="https://www.facebook.com/salforduni/" class="fa fa-facebook"></a></li>
+                                <li><a href="https://twitter.com/SalfordUni" class="fa fa-twitter"></a></li>
+                                <li><a href="https://www.instagram.com/salforduni/" class="fa fa-instagram"></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCe4nyWoHW3jkNXOyqldsHYQ" class="fa fa-youtube"></a></li>
+                                <li><a href="https://www.linkedin.com/school/university-of-salford/" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                        <p class="sig hidden-sm">Developed by Sodexo Employee &amp; Consumer Engagement</p>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- Map JS -->
+        <script src="js/script.js"></script>
+        
+        <!-- Bootstrap Tooltips -->
+        <script>
+            $('.map-tooltip').tooltip();
+        </script>
+
+         <!-- LazyLoad -->
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,1655 @@
+/*----- Typography --------------------------------------------------------------------- */
+@font-face {
+    font-family: "ReplicaLight";
+    src: url("../fonts/ReplicaStdLight.otf");
+}
+
+@font-face {
+    font-family: "Replica";
+    src: url("../fonts/ReplicaStdRegular.otf");
+}
+
+@font-face {
+    font-family: "ReplicaBold";
+    src: url("../fonts/ReplicaStdBold.otf");
+}
+
+body {
+    font-family: "Replica";
+    font-size: 17px;
+    color: #0c2736;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    overflow-x:hidden;
+}
+
+a,
+a:hover {
+    color: #0c2736;
+}
+
+h1,h2,h3,h5 {
+    font-family: "ReplicaBold";
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-family: "ReplicaBold";
+    font-size: 19px;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+
+
+/*----- Header --------------------------------------------------------------------- */
+
+header {
+    padding: 10px 0;
+}
+
+.logo {
+    display: inline-block;
+    width: 230px;
+}
+
+/*----- Nav --------------------------------------------------------------------- */
+
+.navbar {
+    border: none;
+    background: none;
+    margin: 0;
+}
+
+/*----- News Marquee --------------------------------------------------------------------- */
+
+.marquee {
+    width: 100%;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: #72b8bb;
+}
+
+.marquee ul {
+    display: inline-block;
+    padding-left: 100%;
+    text-indent: 0;
+    animation: marquee 35s linear infinite;
+    color: #fff;
+    margin: 0;
+}
+
+.marquee ul li {
+    padding: 5px 20px;
+}
+
+.marquee ul li:before {
+    content: url("../img/slash-small.png");
+    position: relative;
+    top: 3px;
+    left: -20px;
+}
+
+@keyframes marquee {
+    from   { transform: translate(0, 0); }
+    to { transform: translate(-100%, 0); }
+}
+
+.marquee ul li  {
+    display: inline-block;
+}
+
+.map-nav {
+    display: none;
+}
+
+/*----- Footer --------------------------------------------------------------------- */
+
+.footer {
+    padding: 30px 0;
+    background: #cec8bc;
+    border-bottom: 7px solid #d01621;
+}
+
+.footer__logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.footer__menu {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+.footer h4 {
+    text-align: center;
+    margin: 30px 0 15px;
+}
+
+.footer__social-links ul {
+   padding: 0;
+   text-align: center;
+}
+
+.footer__social-links li {
+    display: inline-block;
+}
+
+.footer__social-links .fa {
+    display: block;
+    background: #0c2736;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 23px;
+    color: #cec8bc;
+}
+
+.footer__social-links .fa:hover {
+    text-decoration: none;
+    background: #273D4A;
+}
+
+.footer .sig {
+    text-align: center;
+    margin: 30px 0 0;
+    font-size: 14px;
+}
+
+.map-nav {
+    display: block;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 999;
+    top: 645px;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+}
+
+.map-nav li {
+    display: inline-block;
+}
+
+.map-nav li:hover {
+    cursor: pointer;
+}
+
+.map-nav li a {
+    font-family: "ReplicaBold";
+    font-size: 15px;
+    display: block;
+    text-align: center;
+    background: #d01621;
+    color: #fff;
+    border: 3px solid #d01621;
+    height: 35px;
+    width: 35px;
+    line-height: 30px;
+    border-radius: 50%;
+    margin: 0 2px;
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    animation: none;
+}
+
+.map-nav li a.active ,
+.map-nav li a:hover {
+    text-decoration: none;
+    background: #fff;
+    border: 3px solid #d01621;
+    color: #000;
+}
+
+.map-nav .map-tooltip {
+    transition: all 0.25s;
+    padding: 0;
+}
+
+/*----- Map --------------------------------------------------------------------- */
+
+body.map .navbar-toggle {
+    display: none;
+}
+
+body.map::-webkit-scrollbar,
+body.map::-webkit-scrollbar { 
+    display: none; 
+}
+
+body.map header {
+    position: fixed;
+    width: 100%;
+}
+
+body.map .marquee {
+    position: fixed;
+    top: 90px;
+}
+
+body.map footer {
+    position: fixed;
+    top: 704px;
+    width: 100%;
+    border: none;
+    padding: 75px 0;
+}
+
+#map {
+    overflow: hidden;
+    white-space: nowrap;
+    position: fixed;
+    top: 124px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-wrap: no-wrap;
+}
+
+#box {
+    background: #cec9bc;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.scene {
+    width: 1915px;
+    height: 580px;
+    position: relative;
+    display: inline-block;
+}
+
+.layer {
+    position: absolute;
+    display: block;
+}
+
+.layer .map-tooltip {
+    position: absolute;
+}
+
+.layer .map-link {
+    position: absolute;
+}
+
+.map-link {
+    display: inline-block;
+    padding: 0 10px;
+    border: 2px solid #d01621;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.map-link:hover {
+    background: #d01621;
+    cursor: pointer;
+}
+
+.map-link a {
+    font-family: "ReplicaBold";
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.map-link a:hover,
+.map-link a:active,
+.map-link a:focus {
+    text-decoration: none;
+    outline: none;
+    color: #000;
+}
+
+.map-link:hover a {
+    color: #fff;
+}
+
+.map-link a:after {
+    position: absolute;
+    content: url('../img/identifier.png');
+}
+
+.map-link.left a:after {
+    top: 12px;
+    left: -78px;
+}
+
+.map-link.right a:after {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    top: 12px;
+    right: -78px;
+}
+
+.tooltip {
+    display: block;
+    padding: 20px;
+    font-size: 14px;
+    font-family: "Replica";
+}
+
+.map-tooltip {
+    display: block;
+    background: #fff;
+    padding: 4px 12px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #000;
+    border: none;
+    outline: none;
+    transition: all 0.5s;
+    border: 3px solid #d01621;
+    box-shadow: 0 0 0 0 #d01621;
+    cursor: pointer;
+    -webkit-animation: pulse 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulse 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulse 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulse 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@-webkit-keyframes pulse {to {box-shadow: 0 0 0 12px rgba(208, 22, 33, 0);}}
+@-moz-keyframes pulse {to {box-shadow: 0 0 0 12px rgba(208, 22, 33, 0);}}
+@-ms-keyframes pulse {to {box-shadow: 0 0 0 12px rgba(208, 22, 33, 0);}}
+@keyframes pulse {to {box-shadow: 0 0 0 12px rgba(208, 22, 33, 0);}}
+
+.map-tooltip:hover {
+    background: #d01621;
+    color: #fff;
+    border: 3px solid #d01621;
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    animation: none;
+}
+
+.tooltip-inner {
+    display: block;
+    padding: 10px;
+    z-index: 999;
+}
+
+.fa-info-circle {
+    font-size: 40px;
+    color: #0c2736;
+    background: #fff;
+}
+
+.fa-info-circle:hover,
+.fa-info-circle:focus,
+.fa-info-circle {
+    cursor: pointer;
+    outline: none;
+}
+
+/* Scene 1 - Peel Park */
+#parkSky {
+    z-index: 2;
+}
+
+#parkBackground {
+    z-index: 3;
+}
+
+#parkBackground .map-tooltip {
+    top: 220px;
+    left: 430px;
+}
+
+#parkGround {
+    z-index: 1;
+    bottom: 1px;
+}
+
+#parkChildcare {
+    z-index: 3;
+    top: 280px;
+    left: 315px;
+}
+
+#parkChildcare .map-link {
+    bottom: 200px;
+    right: 190px;
+}
+
+#parkPlane {
+    z-index: 3;
+    top: 80px;
+    left: 1515px;
+}
+
+#parkPlane img {
+    width: 190px;
+}
+
+#parkPlane .map-link {
+    bottom: 95px;
+    left: 120px;
+}
+
+#parkFlexitime {
+    z-index: 3;
+    top: 245px;
+    left: 720px;
+}
+
+#parkFlexitime .map-link {
+    bottom: 250px;
+    left: 110px;
+}
+
+#parkFlexible {
+    z-index: 3;
+    top: 170px;
+    left: 560px;
+}
+
+#parkFlexible .map-link {
+    bottom: 240px;
+    left: 130px;
+}
+
+#parkRetirement {
+    z-index: 3;
+    top: 230px;
+    left: 930px;
+}
+
+#parkRetirement .map-link {
+    bottom: 215px;
+    left: 185px;
+}
+
+#parkNursery {
+    z-index: 3;
+    top: 160px;
+    left: 1430px;
+}
+
+#parkNursery .map-link {
+    bottom: 250px;
+    right: 145px;
+}
+
+#parkPensions {
+    z-index: 3;
+    top: 210px;
+    left: 1540px;
+}
+
+#parkPensions .map-link {
+    bottom: 235px;
+    left: 165px;
+}
+
+#parkBoat {
+    z-index: 3;
+    top: 420px;
+    left: 1120px;
+}
+
+#parkBoat img {
+    width: 570px;
+}
+
+#parkBoat .map-link {
+    bottom: 190px;
+    right: 295px;
+}
+
+/* Scene 2 - Salford Museum */
+#museumSky {
+    z-index: 2;
+}
+
+#museumBackground {
+    z-index: 3;
+}
+
+#museumBackground .map-tooltip {
+    top: 75px;
+    left: 945px;
+}
+
+#museumGround {
+    z-index: 1;
+    top: 275px;
+    left: 10;
+}
+
+#museumLibraryMan {
+    z-index: 3;
+    top: 100px;
+    left: 400px;
+}
+
+#museumSwan {
+    z-index: 3;
+    top: 420px;
+    left: 1500px;
+}
+
+#museumLibraryMan .map-link {
+    bottom: 220px;
+    right: 200px;
+}
+
+#museumColleagues {
+    z-index: 4;
+    top: 200px;
+    left: 680px;
+}
+
+#museumTourists {
+    z-index: 4;
+    top: 210px;
+    left: 1320px;
+}
+
+#museumTourists .map-link {
+    bottom: 240px;
+    left: 140px;
+}
+
+#museumCouple {
+    z-index: 4;
+    top: 180px;
+    left: 1130px;
+}
+
+#museumDog {
+    z-index: 4;
+    top: 230px;
+    left: 950px;
+}
+
+#museumToilets {
+    z-index: 4;
+    top: 165px;
+    left: 1720px;
+}
+
+/* Scene 3 - Wood Street Mission */
+#communitySky {
+    z-index: 2;
+}
+
+#communityBackground {
+    z-index: 4;
+    top: 2px;
+}
+
+#communityBackground .map-tooltip {
+    left: 260px;
+    top: 100px;
+}
+
+#communityGround {
+    z-index: 1;
+    bottom: 1px;
+}
+
+#communityAssistance {
+    z-index: 4;
+    left: 470px;
+    top: 235px;
+}
+
+#communityAssistance .map-link {
+    top: -45px;
+    left: -175px;
+}
+
+#communityFriends {
+    z-index: 4;
+    top: 260px;
+    left: 310px;
+}
+
+#communityMan {
+    z-index: 5;
+    top: 190px;
+    left: 675px;
+}
+
+#communityGirlfriends {
+    z-index: 5;
+    top: 250px;
+    left: 750px;
+}
+
+#communityGive {
+    z-index: 4;
+    top: 175px;
+    left: 900px;
+}
+
+#communityGive .map-link {
+    left: 200px;
+    top: -75px;
+}
+
+#communityPankhurst {
+    z-index: 5;
+    top: 240px;
+    left: 1100px;
+}
+
+#communityGrandparent {
+    z-index: 4;
+    top: 200px;
+    left: 1250px;
+}
+
+#communityInclusive {
+    z-index: 4;
+    top: 220px;
+    left: 1650px;
+}
+
+#communityInclusive .map-link {
+    top: -65px;
+    left: -80px;
+}
+
+#communityWheelchair {
+    z-index: 4;
+    top: 200px;
+    left: 1475px;
+}
+
+/* Scene 4 - Salford Docks */
+#docksSky {
+    z-index: 2;
+}
+
+#docksBackground {
+    z-index: 3;
+}
+
+#docksBackground .map-tooltip {
+    top: 115px;
+    left: 715px;
+}
+
+#docksGround {
+    z-index: 1;
+    bottom: 1px;
+}
+
+#docksWorkers {
+    z-index: 4;
+    top: 230px;
+    left: 470px;
+}
+
+#docksWorkers {
+    z-index: 4;
+    top: 230px;
+    left: 400px;
+}
+
+#docksWorkers .map-link {
+    right: 235px;
+    top: -40px;
+}
+
+#docksCrates {
+    z-index: 3;
+    top: 275px;
+    left: 100px;
+}
+
+#docksBoat {
+    z-index: 4;
+    top: 220px;
+    left: 700px;
+}
+
+#docksBoat .map-link {
+    right: 1000px;
+    top: 110px;
+}
+
+#docksPensions {
+    z-index: 3;
+    top: 170px;
+    left: 1580px;
+}
+
+#docksPensions .map-link {
+    bottom: 235px;
+    left: 165px;
+}
+
+/* Scene 5 - Peel Building */
+#peelSky {
+    z-index: 2;
+}
+
+#peelBackground {
+    z-index: 3;
+}
+
+#peelBackground .map-tooltip {
+    top: 75px;
+    left: 830px;
+}
+
+#peelGround {
+    z-index: 1;
+    top: 275px;
+}
+
+#peelService {
+    z-index: 3;
+    top: 150px;
+    left: 370px;
+}
+
+#peelService .map-link {
+    bottom: 270px;
+    right: 145px;
+}
+
+#peelChildren {
+    z-index: 3;
+    top: 290px;
+    left: 600px;
+}
+
+#peelMerit {
+    z-index: 4;
+    top: 170px;
+    left: 1650px;
+}
+
+#peelMerit .map-link {
+    bottom: 260px;
+    right: 170px;
+}
+
+#peelThanks {
+    z-index: 3;
+    left: 1400px;
+    top: 255px;
+}
+
+#peelThanks .map-link {
+    bottom: 240px;
+    left: 140px;
+}
+
+#peelWheelchair {
+    z-index: 3;
+    top: 220px;
+    left: 1100px;
+}
+
+#peelWheelchair img {
+    width: 130px;
+}
+
+#peelBadge {
+    z-index: 3;
+    top: 290px;
+    left: 880px;
+}
+
+#peelLion {
+    z-index: 4;
+    top: 230px;
+    left: 800px;
+}
+
+/* Scene 6 - Maxwell Hall */
+#hallSky {
+    z-index: 2;
+}
+
+#hallBackground {
+    z-index: 3;
+}
+
+#hallBackground .map-tooltip {
+    top: 210px;
+    left: 1000px;
+}
+
+#hallGround {
+    z-index: 1;
+    bottom: 1px;
+}
+
+#hallNews {
+    z-index: 4;
+    top: 225px;
+    left: 225px;
+}
+
+#hallNews img {
+    width: 100px;
+}
+
+#hallNews .map-link {
+    bottom: 175px;
+    left: 150px;
+}
+
+#hallGary {
+    z-index: 4;
+    top: 250px;
+    left: 1060px;
+}
+
+#hallEvents {
+    z-index: 4;
+    top: 220px;
+    left: 1460px;
+}
+
+#hallEvents .map-link {
+    bottom: 250px;
+    left: 110px;
+}
+
+#hallNetworking {
+    z-index: 3;
+    top: 240px;
+    left: 450px;
+}
+
+#hallNetworking .map-link {
+    bottom: 240px;
+    left: 180px;
+}
+
+#hallSocieties {
+    z-index: 3;
+    top: 140px;
+    left: 1750px;
+}
+
+#hallSocieties .map-link {
+    bottom: 250px;
+    right: 130px;
+}
+
+/* Scene 7 - Old Fire Station */
+#stationSky {
+    z-index: 2;
+}
+
+#stationBackground {
+    z-index: 3;
+}
+
+#stationBackground .map-tooltip {
+    top: 55px;
+    left: 860px;
+}
+
+#stationGround {
+    z-index: 1;
+    top: 275px;
+}
+
+#stationCelebrate {
+    z-index: 3;
+    top: 190px;
+    left: 640px;
+}
+
+#stationCelebrate .map-link {
+    right: 200px;
+    top: -35px;
+}
+
+#stationTrophy {
+    z-index: 3;
+    top: 135px;
+    left: 1645px;
+}
+
+#stationTrophy .map-link {
+    right: 190px;
+    top: -65px;
+}
+
+#stationThankyou {
+    z-index: 3;
+    top: 230px;
+    left: 1400px;
+}
+
+#stationPostbox {
+    z-index: 3;
+    top: 170px;
+    left: 1210px;
+}
+
+#stationPostbox .map-link {
+    left: 150px;
+    top: -15px;
+}
+
+#stationScientist {
+    z-index: 3;
+    top: 150px;
+    left: 370px;
+}
+
+#stationScientist .map-link {
+    right: 150px;
+    top: -35px;
+}
+
+/* Scene 8 - Frederick Road Campus */
+#campusSky {
+    z-index: 2;
+}
+
+#campusBackground {
+    z-index: 3;
+}
+
+#campusBackground .map-tooltip {
+    top: 60px;
+    left: 530px;
+}
+
+#campusGround {
+    z-index: 1;
+    top: 275px;
+}
+
+#campusMarquee {
+    z-index: 3;
+    top: 110px;
+    left: 600px;
+}
+
+#campusTeam {
+    z-index: 3;
+    top: 230px;
+    left: 910px;
+}
+
+#campusTotems {
+    z-index: 4;
+    top: 170px;
+    left: 1220px;
+}
+
+#campusTotems img {
+    width: 200px;
+}
+
+#campusGeneral {
+    z-index: 4;
+    top: 300px;
+    left: 400px;
+}
+
+#campusFinancial {
+    z-index: 4;
+    top: 150px;
+    left: 1500px;
+}
+
+#campusFinancial .map-link {
+    bottom: 230px;
+    right: 205px;
+}
+
+#campusPhysical {
+    z-index: 4;
+    top: 220px;
+    left: 700px;
+}
+
+#campusPhysical .map-link {
+    bottom: 205px;
+    right: 150px;
+}
+
+#campusPsychological {
+    z-index: 4;
+    top: 320px;
+    left: 100px;
+}
+
+#campusPsychological img {
+    width: 110px;
+}
+
+#campusPsychological .map-link {
+    bottom: 130px;
+    left: 165px;
+}
+
+#campusPlan {
+    z-index: 4;
+    top: 270px;
+    left: 535px;
+}
+
+#campusPlan .map-link {
+    bottom: 215px;
+    right: 160px;
+}
+
+#campusGeneral {
+    z-index: 4;
+    top: 175px;
+    left: 40px;
+}
+
+#campusGeneral .map-link {
+    bottom: 245px;
+    left: 95px;
+}
+
+#campusClaims {
+    z-index: 5;
+    top: 305px;
+    left: 1675px;
+}
+
+#campusClaims .map-link {
+    bottom: 160px;
+    right: 230px;
+}
+
+/* Scene 8 - Salford Crescent */
+#crescentSky {
+    z-index: 2;
+}
+
+#crescentBackground {
+    z-index: 3;
+}
+
+#crescentBackground .map-link {
+    left: 645px;
+    top: 105px;
+}
+
+#crescentBackground .map-tooltip {
+    top: 80px;
+    left: 445px;
+}
+
+#crescentGround {
+    z-index: 1;
+    top: 275px;
+}
+
+#crescentBikes {
+    z-index: 3;
+    top: 190px;
+    left: 130px;
+}
+
+#crescentBikes img {
+    width: 310px;
+}
+
+#crescentBikes .map-link {
+    left: 335px;
+    top: 25px;
+}
+
+#crescentCarpark {
+    z-index: 3;
+    top: 285px;
+    left: 1015px;
+}
+
+#crescentCarpark .map-link {
+    right: 985px;
+    bottom: 50px;
+}
+
+#crescentCars {
+    z-index: 3;
+    top: 230px;
+    left: 1050px;
+}
+
+#crescentCars .map-link {
+    left: 210px;
+    bottom: 150px;
+}
+
+#crescentCharge {
+    z-index: 3;
+    top: 245px;
+    left: 1450px;
+}
+
+#crescentCharge .map-link {
+    left: 65px;
+    bottom: 125px;
+}
+
+#crescentWoman {
+    z-index: 4;
+    top: 240px;
+    left: 1375px;
+}
+
+/* Scene 10 - Lowry Outlet */
+#outletSky {
+    z-index: 2;
+}
+
+#outletBackground {
+    z-index: 3;
+}
+
+#outletBackground .map-tooltip {
+    top: 70px;
+    left: 270px;
+}
+
+#outletBackground .map-link {
+    top: 50px;
+    left: 1110px;
+}
+
+#outletGround {
+    z-index: 1;
+    top: 275px;
+}
+
+#outletDelivery {
+    z-index: 3;
+    top: 160px;
+    left: 1700px;
+}
+
+#outletDelivery .map-link {
+    bottom: 200px;
+    right: 150px;
+}
+
+#outletMale {
+    z-index: 3;
+    top: 165px;
+    left: 1200px;
+}
+
+#outletMale .map-link {
+    left: 185px;
+    bottom: 230px;
+}
+
+#outletFamily {
+    z-index: 4;
+    top: 230px;
+    left: 1350px;
+}
+
+#outletFamily .map-link {
+    left: 230px;
+}
+
+#outletFemale {
+    z-index: 3;
+    top: 160px;
+    left: 440px;
+}
+
+#outletFemale .map-link {
+    bottom: 230px;
+    left: 155px;
+}
+
+#outletFemale2 {
+    z-index: 3;
+    top: 215px;
+    left: 660px;
+}
+
+#outletHoliday {
+    z-index: 3;
+    top: 250px;
+    left: 230px;
+}
+
+#outletHoliday .map-link {
+    right: 165px;
+    bottom: 250px;
+}
+
+#outletRunner {
+    z-index: 3;
+    top: 210px;
+    left: 940px;
+}
+
+#outletRunner .map-link {
+    right: 170px;
+    bottom: 225px;
+}
+
+/* Scene 11 - The Lowry */
+#lowrySky {
+    z-index: 2;
+}
+
+#lowryBackground {
+    z-index: 3;
+}
+
+#lowryBackground .map-tooltip {
+    top: 110px;
+    left: 770px;
+}
+
+#lowryGround {
+    z-index: 1;
+    top: 275px;
+}
+
+#lowryGraduates {
+    z-index: 4;
+    left: 1060px;
+    top: 180px;
+}
+
+#lowryEnhancement {
+    z-index: 3;
+    left: 350px;
+    top: 75px;
+}
+
+#lowryEnhancement .map-link {
+    bottom: 320px;
+    right: 165px;
+}
+
+#lowryInduction {
+    z-index: 4;
+    left: 1570px;
+    top: 200px;
+}
+
+#lowryInduction img {
+    width: 240px;
+}
+
+#lowryInduction .map-link {
+    bottom: 235px;
+    left: 135px;
+}
+
+#lowryLearning {
+    z-index: 3;
+    left: 900px;
+    top: 165px;
+}
+
+#lowryLearning .map-link {
+    bottom: 205px;
+    left: 140px;
+}
+
+#lowryResearch {
+    z-index: 3;
+    left: 100px;
+    top: 230px;
+}
+
+#lowryResearch .map-link {
+    bottom: 240px;
+    left: 150px;
+}
+
+#lowrySkills {
+    z-index: 3;
+    left: 1475px;
+    top: 160px;
+}
+
+#lowrySkills .map-link {
+    bottom: 230px;
+    right: 120px;
+}
+
+
+/* Scene 12 - Salford Energy House */
+#energySky {
+    z-index: 2;
+}
+
+#energyGround {
+    z-index: 1;
+    bottom: 1px;
+}
+
+#energyBackground {
+    z-index: 3;
+    top: 0;
+}
+
+#energyBackground .map-link {
+    left: 1320px;
+    top: 220px;
+}
+
+#energyBuilding {
+    z-index: 5;
+    bottom: 148px;
+    left: 160px;
+}
+
+#energyHouse {
+    z-index: 4;
+    top: 96px;
+    left: 445px;
+}
+
+#energyHouse img {
+    width: 530px;
+}
+
+#energyHouse .map-link {
+    left: 515px;
+    top: 100px;
+}
+
+#energyBike {
+    z-index: 6;
+    top: 250px;
+    left: 1070px;
+}
+
+#energyBike .map-link {
+    left: 205px;
+    bottom: 175px;
+}
+
+#energyThunderstorm {
+    z-index: 6;
+}
+
+#energyThunderstorm .map-tooltip {
+    top: 135px;
+    left: 610px;
+}
+
+#energyStudent {
+    z-index: 6;
+    top: 230px;
+    left: 80px;
+}
+
+#energyHealthcare {
+    z-index: 6;
+    top: 240px;
+    left: 260px;
+}
+
+#energyHealthcare img {
+    width: 140px;
+}
+
+#energyBiodiversity {
+    z-index: 6;
+    top: 170px;
+    left: 145px;
+}
+
+#energyInvolved {
+    z-index: 6;
+    top: 180px;
+    left: 1500px;
+}
+
+#energyInvolved .map-link {
+    right: 180px;
+    bottom: 240px;
+}
+
+#energyBiodiversity {
+    z-index: 6;
+    top: 330px;
+    left: 1725px;
+}
+
+#energyBiodiversity .map-link {
+    left: 150px;
+    bottom: 175px;
+}
+
+/* Scene 13 - Media City UK */
+#mediaSky {
+    z-index: 2;
+}
+
+#mediaBackground {
+    z-index: 4;
+}
+
+#mediaBackground .map-tooltip {
+    top: 130px;
+    left: 920px;
+}
+
+#mediaGround {
+    z-index: 1;
+    top: 275px;
+}
+
+#mediaCamera {
+    z-index: 4;
+    top: 160px;
+    left: 300px;
+}
+
+#mediaCamera img {
+    width: 200px;
+}
+
+#mediaCamera .map-link {
+    left: 250px;
+    bottom: 200px;
+}
+
+#mediaVan {
+    z-index: 5;
+    top: 50px;
+    left: 1160px;
+}
+
+#mediaVan .map-link {
+    right: 290px;
+    top: 135px;
+}
+
+#mediaLaptop {
+    z-index: 4;
+    top: 310px;
+    left: 550px;
+}
+
+#mediaPainting {
+    z-index: 5;
+    top: 275px;
+    left: 1500px;
+}
+
+#mediaLaptop .map-link {
+    left: 240px;
+    bottom: 160px;
+}
+
+#mediaTech {
+    z-index: 4;
+    top: 165px;
+    left: 1800px;
+}
+
+#mediaTech .map-link {
+    right: 80px;
+    bottom: 225px;
+}
+
+/* Scene 14 - New Adelphi */
+#adelphiSky {
+    z-index: 2;
+}
+
+#adelphiBackground {
+    z-index: 3;
+}
+
+#adelphiBackground .map-tooltip {
+    top: 70px;
+    left: 485px;
+}
+
+#adelphiGround {
+    z-index: 1;
+    bottom: 1px;
+}
+
+#adelphiJohn {
+    z-index: 4;
+    top: 210px;
+    left: 350px;
+}
+
+#adelphiJohn .map-link {
+    bottom: 220px;
+    right: 150px;
+}
+
+#adelphiJohnny {
+    z-index: 4;
+    top: 170px;
+    left: 750px;
+}
+
+#adelphiJohnny .map-link {
+    bottom: 220px;
+    left: 170px;
+}
+
+#adelphiLiam {
+    z-index: 4;
+    top: 250px;
+    left: 550px;
+}
+
+#adelphiStage {
+    z-index: 4;
+    top: 330px;
+    left: 1100px;
+}
+
+#adelphiStage img {
+    width: 750px;
+}
+
+#adelphiStilts {
+    z-index: 4;
+    top: 100px;
+    left: 1200px;
+}
+
+#adelphiJuggler {
+    z-index: 4;
+    top: 140px;
+    left: 1500px;
+}
+
+#adelphiMan {
+    z-index: 4;
+    top: 230px;
+    left: 1695px;
+}
+
+/* Scene 15 - Under Construction */
+#constructionSky {
+    z-index: 2;
+}
+
+#constructionBackground {
+    z-index: 3;
+}
+
+#constructionBackground .map-tooltip {
+    top: 90px;
+    left: 500px;
+}
+
+#constructionGround {
+    z-index: 1;
+    top: 275px;
+}
+
+#constructionWorkers {
+    z-index: 4;
+    top: 215px;
+    left: 80px;
+}
+
+#constructionWorkers .map-link {
+    bottom: 245px;
+    left: 140px;
+}
+
+#constructionDigger {
+    z-index: 4;
+    top: 225px;
+    left: 1300px;
+}
+
+#constructionDigger .map-link {
+    bottom: 250px;
+    right: 250px;
+}
+
+#constructionFramework {
+    z-index: 4;
+    top: 150px;
+    left: 500px;
+}
+
+#constructionFramework .map-link {
+    bottom: 265px;
+    left: 405px;
+}
